@@ -24,15 +24,15 @@ star1 = Star.new(
 
 star1.save()
 
-# casting1 = Casting.new(
-#   {
-#     'movie_id' => movie1.id,
-#     'star_id' => star1.id,
-#     'fee' => 100
-#   }
-# )
-#
-# casting1.save()
+casting1 = Casting.new(
+  {
+    'movie_id' => movie1.id,
+    'star_id' => star1.id,
+    'fee' => 100
+  }
+)
+
+casting1.save()
 
 movie1.title = 'Star Wars'
 movie1.genre = 'sci-fi'
