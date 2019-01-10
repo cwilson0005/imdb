@@ -34,11 +34,11 @@ casting1 = Casting.new(
 
 casting1.save()
 
-movie1.title = 'Star Wars'
-movie1.genre = 'sci-fi'
-
-star1.first_name = 'Harrison'
-star1.last_name = 'Ford'
+# movie1.title = 'Star Wars'
+# movie1.genre = 'sci-fi'
+#
+# star1.first_name = 'Harrison'
+# star1.last_name = 'Ford'
 
 binding.pry
 nil

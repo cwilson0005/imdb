@@ -45,4 +45,18 @@ class Star
     return result
   end
 
+  def movie()
+    sql = "SELECT movies.* FROM movies INNER JOIN castings ON movies.id = castings.movie_id WHERE castings.star_id = $1"
+    values = [@id]
+    movies = SqlRunner.run(sql, values)
+    return movies.map {|movie| Movie.new(movie)}
+  end
+
+  # def movie()
+  #   sql = "SELECT * FROM movies WHERE id = $1"
+  #   values = [@movie_id]
+  #   movie = SqlRunner.run(sql, values).first
+  #   return Movie.new(movie)
+  # end
+
 end
