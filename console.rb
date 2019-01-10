@@ -3,6 +3,9 @@ require_relative('models/stars')
 require_relative('models/movies')
 require('pry')
 
+Star.delete_all()
+Movie.delete_all()
+
 movie1 = Movie.new(
   {
     'title' => 'Lord of The Rings',
