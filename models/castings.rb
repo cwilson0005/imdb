@@ -1,4 +1,4 @@
-require('../db/sql_runner')
+require_relative('../db/sql_runner')
 
 class Casting
 
@@ -10,6 +10,15 @@ class Casting
     @movie_id = options['movie_id']
     @star_id = options['star_id']
     @fee = options['fee']
+  end
+
+  def save
+    sql = "INSERT INTO stars (movie_id, star_id, fee)
+    VALUES ($1, $2, $3)
+    RETURNING id"
+    values = [@movie_id, @star_id, @fee]
+    casting = SqlRunner.run(sql, values).first
+    @id = casting['id'].to_i
   end
 
 end
