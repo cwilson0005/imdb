@@ -34,5 +34,11 @@ star1.save()
 #
 # casting1.save()
 
+movie1.title = 'Star Wars'
+movie1.genre = 'sci-fi'
+
+star1.first_name = 'Harrison'
+star1.last_name = 'Ford'
+
 binding.pry
 nil
